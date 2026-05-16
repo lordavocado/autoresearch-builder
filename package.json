@@ -1,0 +1,11 @@
+{
+  "name": "autoresearch-assistant",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm run dev --prefix app",
+    "build": "npm run build --prefix app",
+    "preview": "npm run preview --prefix app",
+    "install:app": "cd app && npm install"
+  }
+}

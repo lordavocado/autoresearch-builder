@@ -35,15 +35,18 @@ export function ChatPanel({ messages, isLoading, onSend }: ChatPanelProps) {
                 <ChatMessage key={msg.id} role={msg.role} content={msg.content} />
               ))}
               {isLoading && (
-                <div className="flex gap-3 py-4">
-                  <div className="w-7 h-7 rounded-full bg-deep-plum/10 flex items-center justify-center shrink-0">
-                    <Loader2 size={14} className="text-deep-plum animate-spin" />
+                <div className="flex gap-3 py-3 animate-fade-in">
+                  <div className="w-7 h-7 rounded-full bg-deep-plum/8 flex items-center justify-center shrink-0 border border-deep-plum/10">
+                    <Loader2 size={13} className="text-deep-plum animate-spin" />
                   </div>
-                  <div className="bg-fog-gray rounded-2xl rounded-bl-md px-4 py-3">
-                    <div className="flex gap-1.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-slate-text/40 animate-bounce" style={{ animationDelay: '0ms' }} />
-                      <div className="w-1.5 h-1.5 rounded-full bg-slate-text/40 animate-bounce" style={{ animationDelay: '150ms' }} />
-                      <div className="w-1.5 h-1.5 rounded-full bg-slate-text/40 animate-bounce" style={{ animationDelay: '300ms' }} />
+                  <div className="bg-fog-gray rounded-2xl rounded-bl-sm px-4 py-3 shadow-[0_0_0_1px_rgba(17,26,74,0.03)]">
+                    <div className="flex items-center gap-2">
+                      <div className="flex gap-1">
+                        <div className="w-1.5 h-1.5 rounded-full bg-deep-plum/30 animate-bounce" style={{ animationDelay: '0ms' }} />
+                        <div className="w-1.5 h-1.5 rounded-full bg-deep-plum/30 animate-bounce" style={{ animationDelay: '150ms' }} />
+                        <div className="w-1.5 h-1.5 rounded-full bg-deep-plum/30 animate-bounce" style={{ animationDelay: '300ms' }} />
+                      </div>
+                      <span className="text-[11px] text-slate-text">Thinking...</span>
                     </div>
                   </div>
                 </div>
